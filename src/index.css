@@ -1,0 +1,64 @@
+
+
+body{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+  background-color: #cbcbcb;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.input-area{
+  border-radius: 10px;
+  padding: 2px;
+  margin: 5px;
+  border-width: 2px;
+}
+
+.displays-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.display-item {
+  flex: 0 0 auto;
+  border-radius: 20px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-style: bold;
+}
+
+.displays-container{
+  background-color: #fffbf3;
+  padding: 10px;
+}
+
+.custom-aspects{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+#remove-button{
+  background-color: rgb(255, 137, 137);
+}
+
+#add-button{
+  background-color: rgb(178, 255, 152);
+}
+
