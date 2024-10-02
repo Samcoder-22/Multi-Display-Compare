@@ -6,7 +6,7 @@ function MultipleDisplays() {
     diagonal: "",
     customLength: "",
     customBreadth: "",
-  });  //properties to draw screen
+  });  //Properties to draw screen
 
   const [elements, setElements] = useState([]); 
 
@@ -36,7 +36,7 @@ function MultipleDisplays() {
 
   const color = useMemo(() => {
     return getRandomColor();
-  }, []);       //using useMemo to remember the random color till refresh
+  }, []);       //Using useMemo to remember the random color till refresh
 
   //Scaling the canvas
 
@@ -56,16 +56,14 @@ function MultipleDisplays() {
     const canvas = canvasRef.current;
     if (canvas) {
       const ctx = canvas.getContext("2d");
-
-      // Clear the canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw each element on the canvas
+      // Drawing each display(element) in html canvas
       elements.forEach((element, index) => {
         const { aspect, diagonal, customLength, customBreadth } = element;
         const [aspectX, aspectY] = aspect.split("x").map(Number);
 
-        // Calculate dimensions based on aspect and diagonal
+        // Dimensions calculation based on aspect and diagonal
         let length, breadth;
         if (aspect === "custom") {
           length =
@@ -120,7 +118,7 @@ function MultipleDisplays() {
           onChange={(e) =>
             setCurrentElement({ ...currentElement, aspect: e.target.value })
           }
-        >
+        >  
           <option value="4x3">4x3 (iPad or CRT TV)</option>
           <option value="16x10"> 16x10 (Android Tablet)</option>
           <option value="16x9">16x9 (Standard)</option>
